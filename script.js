@@ -1,4 +1,3 @@
-
 const buttons = document.querySelectorAll("button");
 const main = document.querySelector('main');
 
@@ -23,7 +22,6 @@ for(i=0; i<buttons.length; i++) {
     let computerChoice = computerLetterChoice[Math.round(Math.random() * (2))];
   
     if ((userChoice === "r" && computerChoice === "r") || (userChoice === "p" && computerChoice === "p") || (userChoice === "s" &&  computerChoice === "s")) {
-      
       totalTies++;
       document.querySelector("h2#tieTally").textContent = `Ties: ${totalTies}   ` 
     } else if ((userChoice === "r" && computerChoice === "s") || (userChoice === "p" && computerChoice === "r") || (userChoice === "s" &&  computerChoice === "p")) {
