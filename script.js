@@ -8,9 +8,9 @@ let computerLetterChoice = ["rock", "paper", "scissors"];
 
 const template= `
   <h1>Rock Paper Scissors</h1>
-    <h2 id="winTally">Wins: <span class="total">${totalWins}</span></h2>
-    <h2 id="tieTally">Ties: <span class="total">${totalTies}</span></h2>
-    <h2 id="lossTally">Losses: <span class="total">${totalLosses}</span></h2>
+    <h2 id="winTally">Wins: <span>${totalWins}</span></h2>
+    <h2 id="tieTally">Ties: <span>${totalTies}</span></h2>
+    <h2 id="lossTally">Losses: <span>${totalLosses}</span></h2>
     <h3 id="gameMessage"></h3>
 `;
 
@@ -41,7 +41,7 @@ for(let i=0; i<buttons.length; i++) {
       totalLosses++;
       document.querySelector("#lossTally span").textContent = totalLosses;
       document.querySelector("h3#gameMessage").innerHTML = alertMessageLose;
-      
+
     }
   })
 }
