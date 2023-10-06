@@ -2,6 +2,77 @@
 <html lang="en">
   <head>
     <title>Project 2: DOM Rock Paper Scissors</title>
+    <style>
+     
+     main {
+        width: 340px;
+        border: 1px solid #597485; 
+        border-radius: 8px;
+        margin-bottom: 20px;
+      }
+
+      h1, h2 {
+        font-family: Univers, Helvetica, sans-serif;
+      }
+
+      h1 {
+        background: rgba(58, 170, 197, 0.5);
+        padding: 20px 0 10px 0;
+        margin: 0px;
+        border-radius: 8px 8px 0px 0px;
+        text-align: center;
+      }
+
+      h2::before {
+        content: "";
+        position: relative;
+        margin: 0 0 0 10px;
+      }
+
+      span {
+        color:rgba(252, 106, 57, 0.8)
+      }
+
+      button {
+        background-color: rgba(58, 170, 197, 0.2);
+        color: #000;
+        min-width: 102px;
+        padding: 6px 18px 4px 18px;
+        margin-right: 4px;
+        font-size: .9em;
+        font-family: Univers, Helvetica, sans-serif;
+        border: 1px solid #597485; 
+        border-radius: 6px;
+        box-shadow: #000;
+      }
+
+      button:hover {
+        background-color: rgba(58, 170, 197, 0.5);
+      }
+
+      button:active {
+        background-color: rgba(252, 106, 57, 0.8);
+      }
+      
+      button#r::after {        
+        content:"🪨";
+        margin-left:5px;
+      }
+
+      button#s::after {        
+        content:"✂️";
+        margin-left:5px;
+      }
+      
+      button#p::after {
+        content:"📑";
+        margin-left:5px;
+      }
+
+
+
+
+    </style>
   </head>
   <body>
     <main></main>

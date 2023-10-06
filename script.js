@@ -8,14 +8,14 @@ let computerLetterChoice = ["r", "p", "s"];
 
 const template= `
   <h1>Rock Paper Scissors</h1>
-    <h2 id="winTally">Wins: ${totalWins}</h2>
-    <h2 id="tieTally">Ties: ${totalTies}</h2>
-    <h2 id="lossTally">Losses: ${totalLosses}</h2>
+    <h2 id="winTally">Wins: <span class="total">${totalWins}</span></h2>
+    <h2 id="tieTally">Ties: <span class="total">${totalTies}</span></h2>
+    <h2 id="lossTally">Losses: <span class="total">${totalLosses}</span></h2>
 `;
 
 main.innerHTML = template;
 
-for(i=0; i<buttons.length; i++) {
+for(let i=0; i<buttons.length; i++) {
 
   buttons[i].addEventListener("click", function(e) {
     let userChoice = e.target.value;
@@ -23,14 +23,13 @@ for(i=0; i<buttons.length; i++) {
   
     if ((userChoice === "r" && computerChoice === "r") || (userChoice === "p" && computerChoice === "p") || (userChoice === "s" &&  computerChoice === "s")) {
       totalTies++;
-      document.querySelector("h2#tieTally").textContent = `Ties: ${totalTies}   ` 
+      document.querySelector("#tieTally span").textContent = totalTies;
     } else if ((userChoice === "r" && computerChoice === "s") || (userChoice === "p" && computerChoice === "r") || (userChoice === "s" &&  computerChoice === "p")) {
       totalWins++;
-      document.querySelector("h2#winTally").textContent = `Wins: ${totalWins}   ` 
+      document.querySelector("#winTally span").textContent = totalWins;
     } else if ((userChoice === "r" && computerChoice === "p") || (userChoice === "p" && computerChoice === "s") || (userChoice === "s" &&  computerChoice === "r")) {
       totalLosses++;
-      document.querySelector("h2#lossTally").textContent = `Losses: ${totalLosses}   ` 
+      document.querySelector("#lossTally span").textContent = totalLosses;
     }
-
    })
   }
