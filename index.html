@@ -5,14 +5,15 @@
     <style>
      
      main {
-        width: 340px;
-        border: 1px solid #597485; 
-        border-radius: 8px;
+        width: 338px;
+        border: 1px solid #98a7b1; 
+        border-radius: 9px;
         margin-bottom: 20px;
+        box-shadow: rgba(117, 123, 128, 0.3) 0px 2px 4px -1px,  rgba(138, 145, 150, 0.15) 0px 2px 4px -1px;
       }
 
-      h1, h2 {
-        font-family: Univers, Helvetica, sans-serif;
+      h1, h2, h3 {
+        font-family: Univers, Arial, Helvetica, sans-serif
       }
 
       h1 {
@@ -23,10 +24,14 @@
         text-align: center;
       }
 
-      h2::before {
-        content: "";
-        position: relative;
-        margin: 0 0 0 10px;
+      h2 {
+        margin-left: 10px;
+      }
+
+      h3 {
+        font-size: 1em;
+        line-height: 1.4;
+        margin: 0 10px 10px 10px;
       }
 
       span {
@@ -37,17 +42,19 @@
         background-color: rgba(58, 170, 197, 0.2);
         color: #000;
         min-width: 102px;
-        padding: 6px 18px 4px 18px;
+        padding: 4px 18px 4px 18px;
         margin-right: 4px;
         font-size: .9em;
-        font-family: Univers, Helvetica, sans-serif;
-        border: 1px solid #597485; 
+        font-family: Univers, Arial, Helvetica, sans-serif;
+        border: 1px solid #98a7b1; 
         border-radius: 6px;
-        box-shadow: #000;
+        box-shadow: rgba(117, 123, 128, 0.3) 0px 2px 4px -1px,  rgba(138, 145, 150, 0.15) 0px 2px 4px -1px;
+
       }
 
       button:hover {
         background-color: rgba(58, 170, 197, 0.5);
+        cursor: pointer;
       }
 
       button:active {
@@ -68,17 +75,17 @@
         content:"📑";
         margin-left:5px;
       }
-
-
-
-
     </style>
   </head>
+
   <body>
+
     <main></main>
-    <button id="r" value="r">Rock</button>
-    <button id="p" value="p">Paper</button>
-    <button id="s" value="s">Scissors</button>
+    <button id="r" value="rock">Rock</button>
+    <button id="p" value="paper">Paper</button>
+    <button id="s" value="scissors">Scissors</button>
     <script src="script.js"></script>   
+
   </body>
+
 </html> 
