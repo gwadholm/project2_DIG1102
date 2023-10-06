@@ -16,7 +16,7 @@ const template= `
 
 main.innerHTML = template;
 
-for(let i=0; i<buttons.length; i++) {
+for(let i = 0; i < buttons.length; i++) {
   buttons[i].addEventListener("click", function(e) {
     let userChoice = e.target.value;
     let computerChoice = computerLetterChoice[Math.round(Math.random() * (2))];
